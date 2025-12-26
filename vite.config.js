@@ -1,5 +1,10 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default defineConfig({
   root: 'src', // Set the project root to the src folder
@@ -11,8 +16,7 @@ export default defineConfig({
     outDir: '../dist', // Output to the real root's dist folder
     rollupOptions: {
       input: {
-       
-        //TODO: Find out why resolve is not working (nav in es and en index.html).
+        'main': resolve(__dirname, 'src/index.html'),
         'en-index': resolve(__dirname, 'src/en/index.html'),
         'en-cabins': resolve(__dirname, 'src/en/cabins.html'),
         'es-index': resolve(__dirname, 'src/es/index.html'),
