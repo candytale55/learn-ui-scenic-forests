@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scenic Forests - Inicio</title>
-  <link rel="stylesheet" href="../css/main.css">
-</head>
-<body>
-  <main>
-    <h1>Scenic Forests</h1>
-  </main>
-  <script type="module" src="../js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scenic Forests - Inicio</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="container">
+      <a href="/es/index.html" class="logo">scenic.forests</a>
+      <nav>
+        <button id="menu-btn" aria-label="Abrir Menú" aria-expanded="false">
+          <img src="/public/images/menu.svg" alt="" />
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="/es/index.html" class="active">Inicio</a></li>
+          <li><a href="./cabins.html">Cabañas</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="../en/index.html">EN</a></li>
+          <li><a href="#" class="btn btn-primary cta">Reservas</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content"></main>
+    <script type="module" src="/js/main.js"></script>
+  </body>
 </html>
