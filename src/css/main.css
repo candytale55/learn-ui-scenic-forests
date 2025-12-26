@@ -1,5 +1,13 @@
 /* Global Resets and Layout */
-/* @import './variables.css'; */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+@import "./variables.css";
+
+/* ============================================
+   1. Global Resets & Normalization
+   ============================================ */
 
 *,
 *::before,
@@ -7,7 +15,79 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-bg-light);
+  color: var(--color-black);
+}
+
 img {
   max-width: 100%;
+  height: auto;
   display: block;
+}
+
+/* ============================================
+   2. Typography & Links
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   3. Component Foundations (Functional Modifiers)
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  padding: 0.8em 1.6em;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.active {
+  font-weight: bold;
+}
+
+/* ============================================
+   4. Layout Utilities
+   ============================================ */
+
+.container {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+}
+
+.stack > * + * {
+  margin-top: var(--space-md);
 }
