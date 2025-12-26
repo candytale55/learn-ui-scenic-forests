@@ -1,0 +1,13 @@
+/* Global Resets and Layout */
+/* @import './variables.css'; */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
