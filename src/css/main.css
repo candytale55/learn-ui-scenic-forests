@@ -7,6 +7,7 @@
 @import "./components/navigation.css";
 @import "./components/link-arrow.css";
 @import "./components/avatar.css";
+@import "./pages/home.css";
 
 /* ============================================
    1. Global Resets & Normalization
@@ -87,11 +88,19 @@ ol {
    ============================================ */
 
 .container {
-  max-width: var(--container-max-width);
+  width: min(92%, var(--container-max-width)); /* Fluid width with max constraint */
   margin-inline: auto;
 }
 
+.section {
+  padding-block: var(--section-padding); /* Vertical section spacing */
+}
+
 .stack > * + * {
-  margin-top: var(--space-md);
+  margin-top: var(--space-md); /* Automatic vertical rhythm */
+}
+
+.padded {
+  padding: var(--space-lg); /* Internal cushioning for cards/boxes */
 }
 

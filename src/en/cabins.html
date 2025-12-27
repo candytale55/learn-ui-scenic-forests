@@ -13,23 +13,25 @@
     <!-- ============================================
          HEADER: Site Navigation
          ============================================ -->
-    <header class="container">
-      <a href="index.html" class="logo">scenic.forests</a>
-      <nav>
-        <button id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
-          <img src="/images/menu.svg" alt="" />
-        </button>
-        <ul id="nav-list" class="nav-list">
-          <button id="menu-close" class="btn-close" aria-label="Close Menu">
-            <img src="/images/exit.svg" alt="" />
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">scenic.forests</a>
+        <nav>
+          <button id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+            <img src="/images/menu.svg" alt="" />
           </button>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="./cabins.html" class="active">Cabins</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="../es/cabins.html">ES</a></li>
-          <li><a href="#" class="btn btn-primary cta">Reservations</a></li>
-        </ul>
-      </nav>
+          <ul id="nav-list" class="nav-list">
+            <button id="menu-close" class="btn-close" aria-label="Close Menu">
+              <img src="/images/exit.svg" alt="" />
+            </button>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./cabins.html" class="active">Cabins</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="../es/cabins.html">ES</a></li>
+            <li><a href="#" class="btn btn-primary cta">Reservations</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- ============================================
@@ -38,7 +40,7 @@
     <main>
       <!-- Sub-Hero Section: Page Intro & Breadcrumbs -->
       <section class="sub-hero">
-        <div class="container container--padded">
+        <div class="container padded">
           <nav aria-label="Breadcrumb">
             <ul class="breadcrumbs">
               <li><a href="index.html">Home</a></li>
@@ -58,8 +60,8 @@
       <!-- /Sub-Hero Section -->
 
       <!-- Catalog Section: All Cabin Listings -->
-      <section class="catalog">
-        <div class="container container--padded">
+      <section class="catalog section">
+        <div class="container">
           <ul class="catalog-grid">
             <li>
               <article class="cabin-card">

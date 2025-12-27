@@ -4,11 +4,15 @@
    Header Layout
    ============================================ */
 header {
+  background-color: var(--color-header-bg);
+  width: 100%;
+  padding-block: var(--space-md); /* Only vertical padding on header */
+}
+
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-header-bg);
-  padding: var(--space-md);
 }
 
 .logo {
@@ -69,16 +73,15 @@ header {
   margin: 0;
   padding: 0;
   background-color: var(--color-primary);
-  
+
   /* Closed State */
   transform: translateX(100%);
   opacity: 0;
   visibility: hidden;
-  
+
   /* Smooth Transitions */
-  transition: transform 0.3s ease-in-out,
-              opacity 0.3s ease-in-out,
-              visibility 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
 }
 
 /* Open State */
@@ -130,42 +133,42 @@ header {
   #menu-btn {
     display: none;
   }
-  
+
   /* Hide close button on desktop */
   #menu-close {
     display: none;
   }
-  
+
   /* Reset nav-list to static horizontal layout */
   #nav-list {
     position: static;
     flex-direction: row;
     gap: var(--space-lg);
     background-color: transparent;
-    
+
     /* Always visible on desktop */
     transform: none;
     opacity: 1;
     visibility: visible;
   }
-  
+
   /* Desktop link colors */
   #nav-list a {
     color: var(--color-black);
     font-size: 1rem;
     padding: 0.5rem 1rem;
   }
-  
+
   #nav-list a:hover {
     color: var(--color-primary);
   }
-  
+
   /* Desktop button styling */
   #nav-list .btn.btn-primary {
     background-color: var(--color-primary);
     color: var(--color-white);
   }
-  
+
   #nav-list .btn.btn-primary:hover {
     background-color: #5a8a39;
   }

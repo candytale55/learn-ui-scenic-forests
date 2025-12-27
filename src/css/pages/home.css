@@ -1,0 +1,225 @@
+/* Home Page Styles */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  min-height: 100svh; /* svh = small viewport height (mobile-safe) */
+  background-image: url('/images/forest.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+}
+
+.hero-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+}
+
+/* Hero Copy */
+.hero-copy {
+  max-width: 600px;
+  text-transform: capitalize;
+}
+
+.hero-copy .subtitle {
+  font-size: 1.125rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+}
+
+.hero h1 span {
+  display: block; /* Each span on its own line for GSAP animation */
+}
+
+/* Cabin Preview List */
+.cabin-preview-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-xl);
+  grid-template-columns: 1fr;
+}
+
+/* Desktop Hero Layout */
+@media (min-width: 700px) {
+  .hero-layout {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-4xl);
+  }
+
+  .cabin-preview-list {
+    grid-template-columns: repeat(3, 1fr); /* 3-column grid on larger screens */
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+}
+
+/* ============================================
+   AMENITIES SECTION
+   ============================================ */
+
+.amenities {
+  padding: var(--space-4xl) 0;
+}
+
+.amenities.bg-dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-muted);
+}
+
+.amenities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-4xl);
+  grid-template-columns: 1fr;
+}
+
+.amenity-item {
+  text-align: center;
+}
+
+.amenity-icon {
+  width: 40px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.amenities h2 {
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+/* Desktop Amenities Grid */
+@media (min-width: 650px) {
+  .amenities-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   SOCIAL PROOF SECTION
+   ============================================ */
+
+.social-proof {
+  padding: var(--space-4xl) 0;
+  position: relative;
+  overflow: hidden; /* Prevents watermark from extending beyond section */
+}
+
+/* Featured Quote */
+.featured-quote {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  margin: 0 0 var(--space-md) 0;
+  color: var(--color-black);
+}
+
+.quote-author {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-black);
+  margin-bottom: var(--space-4xl);
+  font-style: normal;
+}
+
+/* Social Layout */
+.social-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+}
+
+/* Bio Section */
+.bio h3 {
+  font-family: var(--font-accent);
+  font-size: 2rem;
+  color: var(--color-black);
+}
+
+/* Testimonial List */
+.testimonial-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.testimonial-item {
+  background-color: var(--color-white);
+  padding: var(--space-lg);
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-body {
+  flex: 1; /* Takes remaining space next to avatar */
+}
+
+.testimonial-text {
+  margin: 0 0 var(--space-md) 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+.testimonial-meta {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Watermark */
+.watermark-fern {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: auto;
+  opacity: 0.1; /* Subtle background decoration */
+  z-index: -1; /* Behind all content */
+  pointer-events: none; /* Won't interfere with clicks */
+}
+
+/* Desktop Social Proof Layout */
+@media (min-width: 900px) {
+  .social-layout {
+    flex-direction: row;
+    gap: var(--space-4xl);
+    align-items: flex-start;
+  }
+
+  .bio {
+    flex: 1; /* Bio and testimonials take equal space */
+  }
+
+  .testimonial-list {
+    flex: 1;
+  }
+}

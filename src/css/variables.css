@@ -16,6 +16,7 @@
   --space-md: var(--space-unit);
   --space-lg: calc(var(--space-unit) * 1.5);
   --space-xl: calc(var(--space-unit) * 2);
+  --space-3xl: calc(var(--space-unit) * 4);
   --space-4xl: calc(var(--space-unit) * 6);
   
   --section-padding: var(--space-3xl);
