@@ -57,3 +57,31 @@ section.amenities.bg-dark
                 └── p
 ```
 
+## Social Proof : Testimonials & Bio
+
+```md
+section.social-proof
+└── div.container.container.padded
+    ├── blockquote.featured-quote
+    ├── cite.quote-author
+    ├── div.social-layout
+    │   ├── article.bio.stack
+    │   │   ├── h3
+    │   │   ├── p
+    │   │   └── p
+    │   └── ul.testimonial-list
+    │       └── li (×3)
+    │           └── article.testimonial-item
+    │               ├── img.testimonial-avatar
+    │               └── div.testimonial-body
+    │                   ├── p.testimonial-text
+    │                   └── p.testimonial-meta (--Author)
+    └── img.watermark-fern (aria-hidden="true")
+```
+
+
+
+
+
+
+
