@@ -38,6 +38,23 @@ header {
   height: 24px;
 }
 
+/* Close Menu Button */
+#menu-close {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+#menu-close img {
+  width: 24px;
+  height: 24px;
+}
+
 /* Navigation List - Mobile Overlay */
 #nav-list {
   position: fixed;
@@ -111,6 +128,11 @@ header {
 @media (min-width: 550px) {
   /* Hide hamburger menu */
   #menu-btn {
+    display: none;
+  }
+  
+  /* Hide close button on desktop */
+  #menu-close {
     display: none;
   }
   
