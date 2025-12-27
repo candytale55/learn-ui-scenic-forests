@@ -1,0 +1,45 @@
+# Structure and notes
+
+## `index.html` class structure
+
+```md
+body
+├── header.container
+│   ├── a.logo[href="index.html"]{scenic.forests}
+│   └── nav
+│       ├── button#menu-btn[aria-label="Toggle Menu"][aria-expanded="false"]
+│       │   └── img[src="/images/menu.svg"][alt=""]
+│       └── ul#nav-list.nav-list
+│           ├── li > a.active[href="index.html"]{Home}
+│           ├── li > a[href="./cabins.html"]{Cabins}
+│           ├── li > a[href="#"]{FAQ}
+│           ├── li > a[href="../es/index.html"]{ES}
+│           └── li > a.btn.btn-primary.cta[href="#"]{Reservations}
+├── main#main-content
+└── script[type="module"][src="/js/main.js"]
+```
+
+## Hero Section
+
+```md
+section.hero
+└── div.container.container.padded
+    └── div.hero-layout
+        ├── div.hero-copy.stack
+        │   ├── p.subtitle
+        │   ├── h1
+        │   │   ├── span (Animated)
+        │   │   ├── span (Animated)
+        │   │   └── span (Animated)
+        │   └── a.btn.btn-primary.cta
+        └── ul.cabin-preview-list
+            └── li (×3)
+                └── article.cabin-card
+                    ├── a > img.cabin-card-img
+                    └── div.cabin-card-body.stack
+                        ├── p.cabin-card-title
+                        ├── p.cabin-card-desc
+                        └── a.link-arrow
+                            ├── span (Cabin Info)
+                            └── img (Arrow icon)
+```

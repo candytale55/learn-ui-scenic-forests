@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- ============================================
+       HEAD: Meta, Title, Styles
+       ============================================ -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +10,9 @@
     <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body>
+    <!-- ============================================
+         HEADER: Site Navigation
+         ============================================ -->
     <header class="container">
       <a href="index.html" class="logo">scenic.forests</a>
       <nav>
@@ -22,7 +28,103 @@
         </ul>
       </nav>
     </header>
-    <main id="main-content"></main>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <main id="main-content">
+      <!-- Hero Section: Main Banner with Featured Cabins -->
+      <section class="hero">
+        <div class="container container padded">
+          <div class="hero-layout">
+            <div class="hero-copy stack">
+              <p class="subtitle">Forest Vacations</p>
+              <h1>
+                <span>Scenic</span>
+                <span>beauties</span>
+                <span>await you</span>
+              </h1>
+              <a href="./cabins.html" class="btn btn-primary cta"
+                >All Rentals</a
+              >
+            </div>
+            <ul class="cabin-preview-list">
+              <li>
+                <article class="cabin-card">
+                  <a href="./cabins.html">
+                    <img
+                      src="/images/cabin1.jpg"
+                      alt="Cozy forest cabin with deck"
+                      class="cabin-card-img"
+                    />
+                  </a>
+                  <div class="cabin-card-body stack">
+                    <p class="cabin-card-title">The Retreat</p>
+                    <p class="cabin-card-desc">
+                      A peaceful escape surrounded by towering pines and
+                      mountain views.
+                    </p>
+                    <a href="./cabins.html" class="link-arrow">
+                      <span>Cabin Info</span>
+                      <img src="/images/arrows.svg" alt="" />
+                    </a>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="cabin-card">
+                  <a href="./cabins.html">
+                    <img
+                      src="/images/cabin2.jpg"
+                      alt="Rustic cabin by the lake"
+                      class="cabin-card-img"
+                    />
+                  </a>
+                  <div class="cabin-card-body stack">
+                    <p class="cabin-card-title">Lakeside Haven</p>
+                    <p class="cabin-card-desc">
+                      Relax by the water with stunning sunset views and tranquil
+                      surroundings.
+                    </p>
+                    <a href="./cabins.html" class="link-arrow">
+                      <span>Cabin Info</span>
+                      <img src="/images/arrows.svg" alt="" />
+                    </a>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="cabin-card">
+                  <a href="./cabins.html">
+                    <img
+                      src="/images/cabin3.jpg"
+                      alt="Modern cabin in the woods"
+                      class="cabin-card-img"
+                    />
+                  </a>
+                  <div class="cabin-card-body stack">
+                    <p class="cabin-card-title">Forest Sanctuary</p>
+                    <p class="cabin-card-desc">
+                      Modern comfort meets natural beauty in this secluded
+                      woodland retreat.
+                    </p>
+                    <a href="./cabins.html" class="link-arrow">
+                      <span>Cabin Info</span>
+                      <img src="/images/arrows.svg" alt="" />
+                    </a>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+    </main>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
     <script type="module" src="/js/main.js"></script>
   </body>
 </html>
