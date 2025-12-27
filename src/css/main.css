@@ -5,6 +5,8 @@
 
 @import "./variables.css";
 @import "./components/navigation.css";
+@import "./components/link-arrow.css";
+@import "./components/avatar.css";
 
 /* ============================================
    1. Global Resets & Normalization
