@@ -43,3 +43,17 @@ section.hero
                             ├── span (Cabin Info)
                             └── img (Arrow icon)
 ```
+
+## Amenities Section
+
+```md
+section.amenities.bg-dark
+└── div.container.container.padded
+    └── ul.amenities-list
+        └── li (×3)
+            └── article.amenity-item.stack
+                ├── img.amenity-icon
+                ├── h2
+                └── p
+```
+
