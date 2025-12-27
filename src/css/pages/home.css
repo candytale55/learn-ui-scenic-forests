@@ -6,7 +6,7 @@
 
 .hero {
   min-height: 100svh; /* svh = small viewport height (mobile-safe) */
-  background-image: url('/images/forest.jpg');
+  background-image: url("/images/forest.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,30 +18,35 @@
 .hero-layout {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4xl);
+  gap: var(--space-xl);
 }
 
 /* Hero Copy */
 .hero-copy {
   max-width: 600px;
   text-transform: capitalize;
+  text-align: center; /* Centered when stacked (mobile/tablet) */
 }
 
 .hero-copy .subtitle {
   font-size: 1.125rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1em; /* Spaced out for emphasis */
   text-transform: uppercase;
-  opacity: 0.9;
+  opacity: 0.9; /* Slightly transparent for visual hierarchy */
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 4rem); /* Fluid typography scales with viewport */
   line-height: 1.2;
   margin-bottom: var(--space-lg);
 }
 
 .hero h1 span {
   display: block; /* Each span on its own line for GSAP animation */
+}
+
+.hero h1 span:nth-child(3) {
+  white-space: nowrap; /* Prevents "await you" from breaking into multiple lines */
 }
 
 /* Cabin Preview List */
@@ -51,23 +56,41 @@
   margin: 0;
   display: grid;
   gap: var(--space-xl);
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Mobile/Tablet: flexible wrapping */
 }
 
-/* Desktop Hero Layout */
-@media (min-width: 700px) {
+/* Tablet: Stack layout, cards try to stay in row */
+@media (min-width: 650px) {
+  .cabin-preview-list {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    ); /* Slightly larger cards */
+  }
+}
+
+/* Desktop Hero Layout: Proportional Flex System */
+@media (min-width: 900px) {
   .hero-layout {
     flex-direction: row;
     align-items: center;
-    gap: var(--space-4xl);
+    gap: var(--space-xl);
+  }
+
+  .hero-copy {
+    flex: 0 0 30%; /* Fixed 30% width, no grow/shrink */
+    text-align: left;
   }
 
   .cabin-preview-list {
-    grid-template-columns: repeat(3, 1fr); /* 3-column grid on larger screens */
-  }
-
-  .hero h1 {
-    font-size: 4rem;
+    flex: 1; /* Takes remaining 70% space */
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Fixed 3 columns: cards shrink to fit */
   }
 }
 
@@ -81,7 +104,9 @@
 
 .amenities.bg-dark {
   background-color: var(--color-bg-dark);
-  color: var(--color-text-muted);
+  color: var(
+    --color-text-muted
+  ); /* Functional modifier: changes text color for dark background */
 }
 
 .amenities-list {
@@ -100,7 +125,7 @@
 .amenity-icon {
   width: 40px;
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto; /* Centers icon in text-align: center parent */
 }
 
 .amenities h2 {
@@ -136,11 +161,11 @@
 }
 
 .quote-author {
-  display: block;
+  display: block; /* Forces <cite> to own line */
   font-size: 1rem;
   color: var(--color-black);
   margin-bottom: var(--space-4xl);
-  font-style: normal;
+  font-style: normal; /* Removes default italic from <cite> */
 }
 
 /* Social Layout */
@@ -172,7 +197,7 @@
   padding: var(--space-lg);
   display: flex;
   gap: var(--space-md);
-  align-items: flex-start;
+  align-items: flex-start; /* Keeps avatar aligned to top of text content */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
