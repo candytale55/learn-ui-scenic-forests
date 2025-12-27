@@ -79,8 +79,21 @@ section.social-proof
     └── img.watermark-fern (aria-hidden="true")
 ```
 
+# `cabins.html`
 
+## Subpage - Breadcrumbs & Intro
 
+```md
+section.sub-hero
+└── div.container.padded
+    ├── nav (aria-label="Breadcrumb")
+    │   └── ul.breadcrumbs
+    │       ├── li > a (Home)
+    │       └── li (Current Page)
+    └── div.sub-hero-copy.stack
+        ├── h1 > span (Our Cabins)
+        └── p.sub-desc
+```
 
 
 

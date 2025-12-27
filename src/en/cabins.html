@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scenic Forests - Cabins</title>
-  <link rel="stylesheet" href="../css/main.css">
-</head>
-<body>
-  <main>
-    <h1>Our Cabins</h1>
-  </main>
-  <script type="module" src="../js/main.js"></script>
-</body>
+  <!-- ============================================
+       HEAD: Meta, Title, Styles
+       ============================================ -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scenic Forests - Cabins</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- ============================================
+         HEADER: Site Navigation
+         ============================================ -->
+    <header class="container">
+      <a href="index.html" class="logo">scenic.forests</a>
+      <nav>
+        <button id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+          <img src="/images/menu.svg" alt="" />
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./cabins.html" class="active">Cabins</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="../es/cabins.html">ES</a></li>
+          <li><a href="#" class="btn btn-primary cta">Reservations</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <main>
+      <!-- Sub-Hero Section: Page Intro & Breadcrumbs -->
+      <section class="sub-hero">
+        <div class="container container--padded">
+          <nav aria-label="Breadcrumb">
+            <ul class="breadcrumbs">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="cabins.html">Cabins</a></li>
+            </ul>
+          </nav>
+          <div class="sub-hero-copy stack">
+            <h1><span>Our Cabins</span></h1>
+            <p class="sub-desc">
+              Discover your perfect forest escape. Each of our hand-crafted cabins offers a unique blend of rustic charm and modern comfort, nestled in the heart of nature.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- /Sub-Hero Section -->
+    </main>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <script type="module" src="../js/main.js"></script>
+  </body>
 </html>
