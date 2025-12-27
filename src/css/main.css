@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap");
 
 @import "./variables.css";
+@import "./components/navigation.css";
 
 /* ============================================
    1. Global Resets & Normalization
@@ -91,3 +92,4 @@ ol {
 .stack > * + * {
   margin-top: var(--space-md);
 }
+

@@ -1,0 +1,150 @@
+/* Navigation Component - Mobile-First */
+
+/* ============================================
+   Header Layout
+   ============================================ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-header-bg);
+  padding: var(--space-md);
+}
+
+.logo {
+  font-family: var(--font-accent);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+/* ============================================
+   Mobile Navigation (Default)
+   ============================================ */
+
+/* Hamburger Menu Button */
+#menu-btn {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+#menu-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Navigation List - Mobile Overlay */
+#nav-list {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-primary);
+  
+  /* Closed State */
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  
+  /* Smooth Transitions */
+  transition: transform 0.3s ease-in-out,
+              opacity 0.3s ease-in-out,
+              visibility 0.3s ease-in-out;
+}
+
+/* Open State */
+#nav-list.is-open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Navigation Links */
+#nav-list a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-family: var(--font-main);
+  font-weight: 400;
+  padding: 0.75rem 1.5rem;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+#nav-list a:hover {
+  color: var(--color-bg-light);
+}
+
+/* Active Link State */
+#nav-list a.active {
+  font-weight: 700;
+}
+
+/* Primary Button in Navigation */
+#nav-list .btn.btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  min-height: 44px;
+}
+
+#nav-list .btn.btn-primary:hover {
+  background-color: var(--color-bg-light);
+}
+
+/* ============================================
+   Desktop Navigation (550px+)
+   ============================================ */
+@media (min-width: 550px) {
+  /* Hide hamburger menu */
+  #menu-btn {
+    display: none;
+  }
+  
+  /* Reset nav-list to static horizontal layout */
+  #nav-list {
+    position: static;
+    flex-direction: row;
+    gap: var(--space-lg);
+    background-color: transparent;
+    
+    /* Always visible on desktop */
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Desktop link colors */
+  #nav-list a {
+    color: var(--color-black);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  #nav-list a:hover {
+    color: var(--color-primary);
+  }
+  
+  /* Desktop button styling */
+  #nav-list .btn.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  
+  #nav-list .btn.btn-primary:hover {
+    background-color: #5a8a39;
+  }
+}
