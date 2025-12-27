@@ -28,4 +28,23 @@ if (menuBtn && menuClose && navList) {
       menuBtn.setAttribute('aria-expanded', 'false');
     }
   });
+
+  // Close Menu on Resize (prevents flash when switching between mobile/desktop)
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    // Disable transitions during resize to prevent flash
+    navList.style.transition = 'none';
+    
+    if (window.innerWidth >= 550) {
+      // Desktop: ensure menu is not in "open" state
+      navList.classList.remove('is-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+    
+    // Re-enable transitions after resize is complete
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      navList.style.transition = '';
+    }, 100);
+  });
 }
