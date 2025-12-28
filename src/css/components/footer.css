@@ -1,0 +1,24 @@
+/* Footer Component */
+
+/* ============================================
+   Site Footer
+   ============================================ */
+
+.site-footer {
+  background-color: var(--color-header-bg); /* Subtle light gray background */
+  text-align: center;
+  padding-block: var(--space-xl); /* Reduced vertical padding (2rem) */
+}
+
+#copyright-text {
+  font-size: var(--fs-sm); /* Small text (0.85rem) */
+  font-weight: var(--fw-reg); /* Lighter weight */
+  color: #666; /* Dark gray for readability on light background */
+  margin: 0; /* Remove default paragraph margin */
+}
+
+.footer-logo {
+  font-family: var(--font-accent); /* Playfair Display to match site logo */
+  font-weight: 600; /* Semi-bold for brand consistency */
+  font-size: var(--fs-base); /* Regular size (1rem) - larger than surrounding text */
+}

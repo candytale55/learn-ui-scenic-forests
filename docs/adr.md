@@ -106,3 +106,23 @@ We will intercept the form's `submit` event via JavaScript, prevent the default 
     - **Library Growth:** Develops a reusable Modal component for the UI library.
 - **Cons:** 
     - **JavaScript Dependency:** The success feedback is tied to the JavaScript layer. We accept this as a design choice to demonstrate client-side event handling and DOM manipulation in this portfolio project.
+
+---
+
+## ADR 007: Dynamic Footer Component
+**Date:** 2025-12-29  
+**Status:** Accepted
+
+### Context
+Every page requires a copyright notice. Manually updating the year across 10+ pages every year is error-prone and represents technical debt.
+
+### Decision
+We will use a central JavaScript utility in `main.js` to inject the current year into a targeted span (`#year`) across all language versions.
+
+### Consequences
+- **Pros:** 
+    - **Maintenance:** Maintenance-free copyright dates.
+    - **Consistency:** Ensures the copyright string is formatted identically across the EN and ES versions.
+- **Cons:** 
+    - **JS Dependency:** If JS fails to load, the year will be blank. (Mitigation: We could hardcode 2025 in the HTML as a fallback).
+

@@ -1,6 +1,15 @@
 // Main JavaScript
 
 // ============================================
+// Footer Year Auto-Update
+// ============================================
+
+const yearElement = document.getElementById('year');
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
+// ============================================
 // Navigation Toggle Logic
 // ============================================
 
