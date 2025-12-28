@@ -17,21 +17,21 @@
       <div class="container">
         <a href="index.html" class="logo">scenic.forests</a>
         <nav>
-          <button id="menu-btn" aria-label="Abrir Menú" aria-expanded="false">
+          <button id="menu-btn" aria-label="Abrir menú" aria-expanded="false">
             <img src="/images/menu.svg" alt="" />
           </button>
           <ul id="nav-list" class="nav-list">
-            <button id="menu-close" class="btn-close" aria-label="Cerrar Menú">
+            <button id="menu-close" class="btn-close" aria-label="Cerrar menú">
               <img src="/images/exit.svg" alt="" />
             </button>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="./cabins.html" class="active">Cabañas</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./faq.html">Preguntas frecuentes</a></li>
             <li><a href="../en/cabins.html">EN</a></li>
             <li>
-              <a href="./reservations.html" class="btn btn-primary cta"
-                >Reservas</a
-              >
+              <a href="./reservations.html" class="btn btn-primary cta">
+                Reservas
+              </a>
             </li>
           </ul>
         </nav>
@@ -39,10 +39,243 @@
     </header>
 
     <!-- ============================================
-         MAIN CONTENT
+         CONTENIDO PRINCIPAL
          ============================================ -->
     <main>
-      <h1>Nuestras Cabañas</h1>
+      <!-- Sección Sub-Hero -->
+      <section class="sub-hero">
+        <div class="container padded">
+          <nav aria-label="Ruta de navegación">
+            <ul class="breadcrumbs">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="cabins.html">Cabañas</a></li>
+            </ul>
+          </nav>
+          <div class="sub-hero-copy stack">
+            <h1><span>Nuestras cabañas</span></h1>
+            <p class="sub-desc">
+              Descubre tu escapada ideal en el bosque. Cada una de nuestras
+              cabañas, construidas artesanalmente, combina el encanto rústico
+              con el confort moderno, en plena naturaleza.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- /Sub-Hero -->
+
+      <!-- Sección Catálogo -->
+      <section class="catalog section">
+        <div class="container">
+          <ul class="catalog-grid">
+            <li>
+              <article class="cabin-card">
+                <a href="#">
+                  <img
+                    src="/images/cabin1.jpg"
+                    alt="Cabaña acogedora en el bosque con terraza"
+                    class="cabin-card-img"
+                  />
+                </a>
+                <div class="cabin-card-body">
+                  <h3 class="cabin-card-title">El Retiro del Bosque</h3>
+                  <p class="cabin-card-desc">
+                    Una escapada tranquila rodeada de pinos imponentes y vistas
+                    a la montaña.
+                  </p>
+                  <a href="#" class="link-arrow">
+                    <span>Información de la cabaña</span>
+                    <img src="/images/arrows.svg" alt="" />
+                  </a>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="cabin-card">
+                <a href="#">
+                  <img
+                    src="/images/cabin2.jpg"
+                    alt="Cabaña rústica junto al lago"
+                    class="cabin-card-img"
+                  />
+                </a>
+                <div class="cabin-card-body">
+                  <h3 class="cabin-card-title">Refugio del Lago</h3>
+                  <p class="cabin-card-desc">
+                    Relájate a la orilla del agua con vistas espectaculares al
+                    atardecer y un entorno sereno.
+                  </p>
+                  <a href="#" class="link-arrow">
+                    <span>Información de la cabaña</span>
+                    <img src="/images/arrows.svg" alt="" />
+                  </a>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="cabin-card">
+                <a href="#">
+                  <img
+                    src="/images/cabin3.jpg"
+                    alt="Cabaña moderna en el bosque"
+                    class="cabin-card-img"
+                  />
+                </a>
+                <div class="cabin-card-body">
+                  <h3 class="cabin-card-title">Santuario Verde</h3>
+                  <p class="cabin-card-desc">
+                    La comodidad moderna se fusiona con la belleza natural en
+                    este refugio apartado del bosque.
+                  </p>
+                  <a href="#" class="link-arrow">
+                    <span>Información de la cabaña</span>
+                    <img src="/images/arrows.svg" alt="" />
+                  </a>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="cabin-card">
+                <a href="#">
+                  <img
+                    src="/images/cabin1.jpg"
+                    alt="Cabaña acogedora en el bosque con terraza"
+                    class="cabin-card-img"
+                  />
+                </a>
+                <div class="cabin-card-body">
+                  <h3 class="cabin-card-title">Cumbre de los Pinos</h3>
+                  <p class="cabin-card-desc">
+                    Amplios espacios con vistas panorámicas al bosque y senderos
+                    naturales muy cerca.
+                  </p>
+                  <a href="#" class="link-arrow">
+                    <span>Información de la cabaña</span>
+                    <img src="/images/arrows.svg" alt="" />
+                  </a>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="cabin-card">
+                <a href="#">
+                  <img
+                    src="/images/cabin2.jpg"
+                    alt="Cabaña rústica junto al lago"
+                    class="cabin-card-img"
+                  />
+                </a>
+                <div class="cabin-card-body">
+                  <h3 class="cabin-card-title">Orilla Serena</h3>
+                  <p class="cabin-card-desc">
+                    Déjate arrullar por el sonido del agua en este encantador
+                    refugio junto al arroyo.
+                  </p>
+                  <a href="#" class="link-arrow">
+                    <span>Información de la cabaña</span>
+                    <img src="/images/arrows.svg" alt="" />
+                  </a>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="cabin-card">
+                <a href="#">
+                  <img
+                    src="/images/cabin3.jpg"
+                    alt="Cabaña moderna en el bosque"
+                    class="cabin-card-img"
+                  />
+                </a>
+                <div class="cabin-card-body">
+                  <h3 class="cabin-card-title">Mirador del Bosque</h3>
+                  <p class="cabin-card-desc">
+                    Terraza elevada con vistas impresionantes y comodidades de
+                    primer nivel en cada detalle.
+                  </p>
+                  <a href="#" class="link-arrow">
+                    <span>Información de la cabaña</span>
+                    <img src="/images/arrows.svg" alt="" />
+                  </a>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="cabin-card">
+                <a href="#">
+                  <img
+                    src="/images/cabin1.jpg"
+                    alt="Cabaña acogedora en el bosque con terraza"
+                    class="cabin-card-img"
+                  />
+                </a>
+                <div class="cabin-card-body">
+                  <h3 class="cabin-card-title">Eco de la Montaña</h3>
+                  <p class="cabin-card-desc">
+                    Ubicación remota, ideal para observar las estrellas y
+                    desconectarte por completo.
+                  </p>
+                  <a href="#" class="link-arrow">
+                    <span>Información de la cabaña</span>
+                    <img src="/images/arrows.svg" alt="" />
+                  </a>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="cabin-card">
+                <a href="#">
+                  <img
+                    src="/images/cabin2.jpg"
+                    alt="Cabaña rústica junto al lago"
+                    class="cabin-card-img"
+                  />
+                </a>
+                <div class="cabin-card-body">
+                  <h3 class="cabin-card-title">Refugio de Cedros</h3>
+                  <p class="cabin-card-desc">
+                    Cabaña ideal para familias, con sala de juegos y fogata al
+                    aire libre.
+                  </p>
+                  <a href="#" class="link-arrow">
+                    <span>Información de la cabaña</span>
+                    <img src="/images/arrows.svg" alt="" />
+                  </a>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="cabin-card">
+                <a href="#">
+                  <img
+                    src="/images/cabin3.jpg"
+                    alt="Cabaña moderna en el bosque"
+                    class="cabin-card-img"
+                  />
+                </a>
+                <div class="cabin-card-body">
+                  <h3 class="cabin-card-title">Pinos Susurrantes</h3>
+                  <p class="cabin-card-desc">
+                    Escapada romántica con jacuzzi privado y cocina gourmet.
+                  </p>
+                  <a href="#" class="link-arrow">
+                    <span>Información de la cabaña</span>
+                    <img src="/images/arrows.svg" alt="" />
+                  </a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- /Catálogo -->
     </main>
 
     <!-- ============================================
