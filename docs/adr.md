@@ -67,6 +67,7 @@ Include **Vitest** in the development stack to allow for unit testing of JavaScr
 - **Pros:** Modern, fast testing experience that shares configuration with Vite.
 - **Cons:** Small increase in initial project complexity and dependencies.
 
+
 ---
 
 ## ADR 005: Native HTML5 Accordion for FAQ
@@ -88,3 +89,20 @@ We will use the native HTML5 `<details>` and `<summary>` elements to build the a
     - **Animation Limits:** Transitioning the height of a `<details>` element from "closed" to "open" is technically difficult with pure CSS (it usually snaps). We accept this trade-off in favor of accessibility and simplicity, focusing on state-based styling (icons and colors) instead of complex height animations.
 
 ---
+
+## ADR 006: Client-side Form Interception and Feedback Modal
+**Date:** 2025-12-28  
+**Status:** Accepted
+
+### Context
+The Reservations page requires a user-friendly way to confirm a booking without a real backend processing the POST request. 
+
+### Decision
+We will intercept the form's `submit` event via JavaScript, prevent the default browser behavior, and trigger a modal window for user feedback.
+
+### Consequences
+- **Pros:** 
+    - **UX:** Provides immediate, high-fidelity feedback via a modal without the "flicker" of a page reload.
+    - **Library Growth:** Develops a reusable Modal component for the UI library.
+- **Cons:** 
+    - **JavaScript Dependency:** The success feedback is tied to the JavaScript layer. We accept this as a design choice to demonstrate client-side event handling and DOM manipulation in this portfolio project.

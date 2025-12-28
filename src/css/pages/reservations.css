@@ -1,0 +1,52 @@
+/* Reservations Page Styles */
+
+/* ============================================
+   Booking Layout
+   ============================================ */
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: var(--space-4xl);
+  align-items: start;
+}
+
+/* Desktop: Two-column layout */
+@media (min-width: 800px) {
+  .booking-layout {
+    grid-template-columns: 1fr 1fr; /* Form left, Map right */
+  }
+}
+
+/* ============================================
+   Booking Form
+   ============================================ */
+
+#booking-form {
+  width: 100%;
+}
+
+#booking-form .btn {
+  width: 100%; /* Full-width submit button */
+  margin-top: var(--space-md);
+}
+
+/* ============================================
+   Map Container
+   ============================================ */
+
+.map-container {
+  width: 100%;
+  min-height: 400px; /* Minimum height for map visibility */
+  border-radius: var(--border-radius-lg);
+  overflow: hidden; /* Keeps iframe corners rounded */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle elevation */
+}
+
+@media (min-width: 800px) {
+  .map-container {
+    min-height: 600px; /* Taller on desktop to match form height */
+    sticky: top; /* Optional: keeps map visible while scrolling form */
+    top: var(--space-xl);
+  }
+}
