@@ -66,3 +66,25 @@ Include **Vitest** in the development stack to allow for unit testing of JavaScr
 ### Consequences
 - **Pros:** Modern, fast testing experience that shares configuration with Vite.
 - **Cons:** Small increase in initial project complexity and dependencies.
+
+---
+
+## ADR 005: Native HTML5 Accordion for FAQ
+**Date:** 2025-12-28  
+**Status:** Accepted
+
+### Context
+The FAQ page requires an accordion interface to organize information (Booking, Amenities, Location) without overwhelming the user visually. We need a solution that fits our library-driven approach.
+
+### Decision
+We will use the native HTML5 `<details>` and `<summary>` elements to build the accordion component. 
+
+### Consequences
+- **Pros:** 
+    - **Accessibility (a11y):** Native keyboard support and screen reader compatibility are handled by the browser automatically.
+    - **Performance:** Zero JavaScript is required for the toggle logic, reducing the main thread load.
+    - **Maintenance:** Extremely simple markup that is easy to replicate across languages.
+- **Cons:** 
+    - **Animation Limits:** Transitioning the height of a `<details>` element from "closed" to "open" is technically difficult with pure CSS (it usually snaps). We accept this trade-off in favor of accessibility and simplicity, focusing on state-based styling (icons and colors) instead of complex height animations.
+
+---
