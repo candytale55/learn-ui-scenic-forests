@@ -2,6 +2,9 @@
 
 .cabin-card {
   margin: var(--space-lg);
+  display: flex; /* Flexbox container for vertical layout */
+  flex-direction: column;
+  height: 100%; /* Stretches to fill grid cell height */
 }
 
 .cabin-card-img {
@@ -12,6 +15,9 @@
 
 .cabin-card-body {
   padding-top: var(--space-md);
+  display: flex; /* Nested flexbox for content distribution */
+  flex-direction: column;
+  flex: 1; /* Grows to fill available space */
 }
 
 .cabin-card-title {
@@ -23,4 +29,15 @@
 .cabin-card-desc {
   font-size: var(--fs-base);
   margin-bottom: var(--space-md);
+
+  /* Line clamping: limits text to 3 lines with ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cabin-card-body .link-arrow {
+  margin-top: auto; /* Pushes link to bottom of card */
 }
