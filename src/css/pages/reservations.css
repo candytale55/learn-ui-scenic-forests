@@ -46,7 +46,7 @@
 @media (min-width: 800px) {
   .map-container {
     min-height: 600px; /* Taller on desktop to match form height */
-    sticky: top; /* Optional: keeps map visible while scrolling form */
+    position: sticky; /* Optional: keeps map visible while scrolling form */
     top: var(--space-xl);
   }
 }
