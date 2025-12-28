@@ -28,6 +28,11 @@
   text-align: center; /* Centered when stacked (mobile/tablet) */
 }
 
+/* Spanish: Respect sentence case from HTML */
+:lang(es) .hero-copy {
+  text-transform: none;
+}
+
 .hero-copy .subtitle {
   font-size: 1.125rem;
   letter-spacing: 0.1em; /* Spaced out for emphasis */
@@ -47,6 +52,11 @@
 
 .hero h1 span:nth-child(3) {
   white-space: nowrap; /* Prevents "await you" from breaking into multiple lines */
+}
+
+/* Spanish H1: Slightly smaller to accommodate longer text */
+:lang(es) .hero h1 {
+  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
 }
 
 /* Cabin Preview List */
@@ -83,6 +93,11 @@
   .hero-copy {
     flex: 0 0 30%; /* Fixed 30% width, no grow/shrink */
     text-align: left;
+  }
+
+  /* Spanish: Give text column 5% more room for longer phrases */
+  :lang(es) .hero-copy {
+    flex: 0 0 35%;
   }
 
   .cabin-preview-list {
