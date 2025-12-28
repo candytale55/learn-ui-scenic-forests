@@ -11,16 +11,16 @@
       <div class="container">
         <a href="index.html" class="logo">scenic.forests</a>
         <nav>
-          <button id="menu-btn" aria-label="Abrir Menú" aria-expanded="false">
+          <button id="menu-btn" aria-label="Abrir menú" aria-expanded="false">
             <img src="/images/menu.svg" alt="" />
           </button>
           <ul id="nav-list" class="nav-list">
-            <button id="menu-close" class="btn-close" aria-label="Cerrar Menú">
+            <button id="menu-close" class="btn-close" aria-label="Cerrar menú">
               <img src="/images/exit.svg" alt="" />
             </button>
             <li><a href="index.html" class="active">Inicio</a></li>
             <li><a href="./cabins.html">Cabañas</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./faq.html">Preguntas frecuentes</a></li>
             <li><a href="../en/index.html">EN</a></li>
             <li>
               <a href="./reservations.html" class="btn btn-primary cta"
@@ -31,7 +31,232 @@
         </nav>
       </div>
     </header>
-    <main id="main-content"></main>
+    <!-- ============================================
+         CONTENIDO PRINCIPAL
+         ============================================ -->
+    <main id="main-content">
+      <!-- Sección Hero: Banner Principal con Cabañas Destacadas -->
+      <section class="hero section">
+        <div class="container">
+          <div class="hero-layout">
+            <div class="hero-copy stack">
+              <p class="subtitle">Vacaciones en el bosque</p>
+              <h1>
+                <span>La belleza</span>
+                <span>del bosque</span>
+                <span>te espera</span>
+              </h1>
+              <a href="./cabins.html" class="btn btn-primary cta"
+                >Ver todas las cabañas</a
+              >
+            </div>
+            <ul class="cabin-preview-list">
+              <li>
+                <article class="cabin-card">
+                  <a href="./cabins.html">
+                    <img
+                      src="/images/cabin1.jpg"
+                      alt="Cabaña acogedora en el bosque con terraza"
+                      class="cabin-card-img"
+                    />
+                  </a>
+                  <div class="cabin-card-body">
+                    <h3 class="cabin-card-title">El Retiro del Bosque</h3>
+                    <p class="cabin-card-desc">
+                      Escapada tranquila entre pinos altos y vistas a la montaña.
+                    </p>
+                    <a href="./cabins.html" class="link-arrow">
+                      <span>Información</span>
+                      <img src="/images/arrows.svg" alt="" />
+                    </a>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="cabin-card">
+                  <a href="./cabins.html">
+                    <img
+                      src="/images/cabin2.jpg"
+                      alt="Cabaña rústica junto al lago"
+                      class="cabin-card-img"
+                    />
+                  </a>
+                  <div class="cabin-card-body">
+                    <h3 class="cabin-card-title">Refugio del Lago</h3>
+                    <p class="cabin-card-desc">
+                      Descansa junto al agua con atardeceres increíbles y calma total.
+                    </p>
+                    <a href="./cabins.html" class="link-arrow">
+                      <span>Información</span>
+                      <img src="/images/arrows.svg" alt="" />
+                    </a>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="cabin-card">
+                  <a href="./cabins.html">
+                    <img
+                      src="/images/cabin3.jpg"
+                      alt="Cabaña moderna en el bosque"
+                      class="cabin-card-img"
+                    />
+                  </a>
+                  <div class="cabin-card-body">
+                    <h3 class="cabin-card-title">Santuario Verde</h3>
+                    <p class="cabin-card-desc">
+                      Confort moderno en un refugio apartado, rodeado de naturaleza.
+                    </p>
+                    <a href="./cabins.html" class="link-arrow">
+                      <span>Información</span>
+                      <img src="/images/arrows.svg" alt="" />
+                    </a>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- /Sección Hero -->
+
+      <!-- Sección Comodidades: Servicios Destacados -->
+      <section class="amenities bg-dark section">
+        <div class="container">
+          <ul class="amenities-list">
+            <li>
+              <article class="amenity-item stack">
+                <img src="/images/icon-wifi.svg" alt="" class="amenity-icon" />
+                <h2>WiFi rápido</h2>
+                <p>
+                  Conéctate con internet de 
+                  alta velocidad en
+                  toda la cabaña.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article class="amenity-item stack">
+                <img
+                  src="/images/icon-hottub.svg"
+                  alt=""
+                  class="amenity-icon"
+                />
+                <h2>Jacuzzi</h2>
+                <p>Relájate bajo las estrellas en tu jacuzzi privado al aire libre.</p>
+              </article>
+            </li>
+            <li>
+              <article class="amenity-item stack">
+                <img
+                  src="/images/icon-stocked.svg"
+                  alt=""
+                  class="amenity-icon"
+                />
+                <h2>Todo listo</h2>
+                <p>Lo esencial para una estadía cómoda y sin complicaciones.</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- /Sección Comodidades -->
+
+      <!-- Sección Prueba Social: Testimonios y Acerca De -->
+      <section class="social-proof section">
+        <div class="container">
+          <!-- Cita Destacada -->
+          <blockquote class="featured-quote">
+            "Scenic Forests nos dio la escapada perfecta. Las cabañas son
+            hermosas, el bosque es silencioso, y nos fuimos totalmente renovados."
+          </blockquote>
+          <cite class="quote-author">— Sarah y Michael, Portland</cite>
+
+          <div class="social-layout">
+            <!-- Biografía: Sección Acerca De -->
+            <article class="bio stack">
+              <h3>Nuestro refugio en el bosque</h3>
+              <p>
+                En el corazón del noroeste del Pacífico, Scenic Forests reúne una
+                colección de cabañas construidas con técnicas tradicionales para 
+                quienes buscan calma y una
+                conexión real con la naturaleza.
+              </p>
+              <p>
+                Cada cabaña cuenta con las comodidades modernas sin perder el encanto
+                rústico que hace especial la vida en el bosque. Ya sea para
+                explorar o descansar, aquí encontrarás tu escapada ideal.
+              </p>
+            </article>
+
+            <!-- Lista de Testimonios -->
+            <ul class="testimonial-list">
+              <li>
+                <article class="testimonial-item">
+                  <img
+                    src="../images/avatars/profile-image-emma.jpg"
+                    alt=""
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-body">
+                    <p class="testimonial-text">
+                      "¡Una experiencia inolvidable! La cabaña estaba impecable y
+                      las vistas al bosque eran increíbles. Ya queremos volver."
+                    </p>
+                    <p class="testimonial-meta">Emma T., Seattle</p>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="testimonial-item">
+                  <img
+                    src="../images/avatars/profile-image-james.jpg"
+                    alt=""
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-body">
+                    <p class="testimonial-text">
+                      "El jacuzzi bajo las estrellas fue mágico. Todo fue tal como
+                      se describía. ¡Muy recomendable!"
+                    </p>
+                    <p class="testimonial-meta">James K., Vancouver</p>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="testimonial-item">
+                  <img
+                    src="../images/avatars/profile-image-rachel.jpg"
+                    alt=""
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-body">
+                    <p class="testimonial-text">
+                      "Ideal para desconectarte. El WiFi estaba cuando lo
+                      necesitábamos, pero el bosque hizo el resto, en el mejor
+                      sentido."
+                    </p>
+                    <p class="testimonial-meta">Rachel M., San Francisco</p>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+
+          <img
+            src="/images/fern.svg"
+            alt=""
+            class="watermark-fern"
+            aria-hidden="true"
+          />
+        </div>
+      </section>
+      <!-- /Sección Prueba Social -->
+    </main>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
     <script type="module" src="/js/main.js"></script>
   </body>
 </html>
