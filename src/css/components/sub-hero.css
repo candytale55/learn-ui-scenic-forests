@@ -1,0 +1,56 @@
+/* Sub-Hero Component */
+
+/* ============================================
+   Sub-Hero Section
+   ============================================ */
+
+.sub-hero {
+  padding-top: var(--space-lg); /* Small gap from navigation (~3rem) */
+  padding-bottom: var(--space-2xl); /* Moderate breathing room for next section (~4rem) */
+  background-image: url("/images/forest-bg-2.jpg");
+  background-size: cover;
+  background-position: bottom; /* Anchor image to bottom for better visual balance */
+  background-repeat: no-repeat;
+  display: flex;
+
+  /* Context-aware color system using CSS custom property */
+  --sub-hero-color: var(
+    --color-black
+  ); /* Default: dark text for light backgrounds */
+  color: var(--sub-hero-color); /* Applies the custom property */
+}
+
+/* Modifier: Override color for dark background images */
+.sub-hero.dark-bg {
+  --sub-hero-color: var(--color-white); /* Light text for dark backgrounds */
+}
+
+/* ============================================
+   Sub-Hero Content
+   ============================================ */
+
+.sub-hero-copy {
+  max-width: 50%; /* Proportional width: matches ~2 of 4 cabin cards on desktop */
+  text-align: left; /* Left-aligned for visual hierarchy */
+}
+
+.sub-hero h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem); /* Fluid typography: smaller on mobile, scales with viewport */
+  line-height: 1.3; /* Breathing room between lines */
+  margin-top: var(--space-xl); /* Spacing between breadcrumbs and heading */
+}
+
+/* Desktop: Single-line titles for clean presentation */
+@media (min-width: 901px) {
+  .sub-hero h1 {
+    white-space: nowrap; /* Prevents title wrapping on larger screens */
+  }
+}
+
+/* Mobile: Full-width text for better readability */
+@media (max-width: 900px) {
+  .sub-hero-copy {
+    max-width: 100%; /* Text spans full width on smaller screens */
+    text-align: center; /* Centered for mobile symmetry */
+  }
+}
