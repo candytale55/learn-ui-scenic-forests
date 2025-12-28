@@ -1,0 +1,23 @@
+/* FAQ Page Styles */
+
+/* ============================================
+   FAQ Section Layout
+   ============================================ */
+
+.faq .container {
+  max-width: 800px; /* Readable measure for long-form content */
+  text-align: center; /* Centers headings per project style */
+}
+
+/* ============================================
+   FAQ Category Spacing
+   ============================================ */
+
+.faq-category h2 {
+  margin-top: var(--space-4xl); /* Clear separation between categories */
+  text-align: center; /* Centered category headings */
+}
+
+.faq-category:first-child h2 {
+  margin-top: 0; /* No extra space on first category */
+}

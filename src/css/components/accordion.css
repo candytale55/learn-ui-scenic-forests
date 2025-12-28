@@ -1,0 +1,87 @@
+/* Accordion Component */
+
+/* Remove default disclosure markers */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  list-style: none; /* Remove marker in Firefox */
+}
+
+/* ============================================
+   Accordion Container
+   ============================================ */
+
+.accordion {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle separator between questions */
+  transition: background-color 0.2s ease;
+}
+
+.accordion:hover {
+  background-color: rgba(0, 0, 0, 0.02); /* Subtle hover feedback */
+}
+
+.accordion[open] {
+  background-color: rgba(114, 168, 74, 0.05); /* Light primary tint when open */
+}
+
+/* ============================================
+   Accordion Header (Summary)
+   ============================================ */
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  user-select: none; /* Prevents text selection on click */
+  transition: color 0.2s ease;
+}
+
+.accordion-header:hover {
+  color: var(--color-primary); /* Accent color on hover */
+}
+
+/* Custom Plus/Minus Icon */
+.accordion-header::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  transition: transform 0.3s ease; /* Smooth icon transition */
+  flex-shrink: 0; /* Prevents icon from shrinking */
+  margin-left: var(--space-md); /* Space between text and icon */
+}
+
+/* Change to minus when open */
+.accordion[open] .accordion-header::after {
+  content: "−"; /* Minus symbol */
+  transform: rotate(180deg); /* Subtle rotation effect */
+}
+
+/* ============================================
+   Accordion Content
+   ============================================ */
+
+.accordion-content {
+  padding: 0 var(--space-md) var(--space-md); /* No top padding (header provides it) */
+  color: var(--color-black);
+  line-height: 1.6;
+}
+
+/* ============================================
+   FAQ Category Spacing
+   ============================================ */
+
+.faq-category {
+  margin-bottom: var(--space-4xl); /* Space between categories */
+}
+
+.faq-category h2 {
+  margin-bottom: var(--space-lg); /* Space below category heading */
+  color: var(--color-primary);
+  font-size: var(--fs-lg);
+}
