@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- ============================================
+       HEAD: Meta, Title, Styles
+       ============================================ -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scenic Forests - Reservations</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- ============================================
+         HEADER: Site Navigation
+         ============================================ -->
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">scenic.forests</a>
+        <nav>
+          <button id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+            <img src="/images/menu.svg" alt="" />
+          </button>
+          <ul id="nav-list" class="nav-list">
+            <button id="menu-close" class="btn-close" aria-label="Close Menu">
+              <img src="/images/exit.svg" alt="" />
+            </button>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./cabins.html">Cabins</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="../es/reservations.html">ES</a></li>
+            <li><a href="./reservations.html" class="btn btn-primary cta active">Reservations</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <main>
+      <!-- Sub-Hero Section: Page Intro & Breadcrumbs -->
+      <section class="sub-hero">
+        <div class="container padded">
+          <nav aria-label="Breadcrumb">
+            <ul class="breadcrumbs">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+          </nav>
+          <div class="sub-hero-copy stack">
+            <h1><span>Book Your Escape</span></h1>
+            <p class="sub-desc">
+              Reserve your perfect forest retreat. Choose your cabin, select your dates, and start planning your peaceful getaway in the heart of nature.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- /Sub-Hero Section -->
+
+      <!-- Booking Section: Form & Map -->
+      <section class="booking section">
+        <div class="container padded">
+          <div class="booking-layout">
+            <!-- Left Column: Booking Form -->
+            <form id="booking-form" class="stack">
+              <div class="form-group">
+                <label for="full-name">Full Name <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="full-name" 
+                  name="full-name" 
+                  required 
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="cabin-select">Select Cabin <span class="required">*</span></label>
+                <select id="cabin-select" name="cabin" required>
+                  <option value="">Choose a cabin...</option>
+                  <option value="the-retreat">The Retreat</option>
+                  <option value="lakeside-haven">Lakeside Haven</option>
+                  <option value="forest-sanctuary">Forest Sanctuary</option>
+                  <option value="pine-ridge-lodge">Pine Ridge Lodge</option>
+                  <option value="creekside-cottage">Creekside Cottage</option>
+                  <option value="woodland-vista">Woodland Vista</option>
+                  <option value="mountain-echo">Mountain Echo</option>
+                  <option value="cedar-haven">Cedar Haven</option>
+                  <option value="whispering-pines">Whispering Pines</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="check-in">Check-in Date <span class="required">*</span></label>
+                  <input 
+                    type="date" 
+                    id="check-in" 
+                    name="check-in" 
+                    required 
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="check-out">Check-out Date <span class="required">*</span></label>
+                  <input 
+                    type="date" 
+                    id="check-out" 
+                    name="check-out" 
+                    required 
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="guests">Number of Guests <span class="required">*</span></label>
+                <input 
+                  type="number" 
+                  id="guests" 
+                  name="guests" 
+                  min="1" 
+                  max="6" 
+                  value="2" 
+                  required 
+                />
+              </div>
+
+              <p class="form-note">
+                Questions? Write to us at <a href="mailto:info@scenicforests.fake">info@scenicforests.fake</a>
+              </p>
+
+              <button type="submit" class="btn btn-primary">Confirm Booking</button>
+            </form>
+
+            <!-- Right Column: Map Container -->
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.5!2d-121.7!3d47.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDMwJzAwLjAiTiAxMjHCsDQyJzAwLjAiVw!5e0!3m2!1sen!2sus!4v1234567890"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Scenic Forests Location Map">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Booking Section -->
+    </main>
+
+    <!-- ============================================
+         SUCCESS MODAL
+         ============================================ -->
+    <div id="success-modal" class="modal-overlay" aria-hidden="true">
+      <div class="modal-card stack padded">
+        <button id="modal-close" class="modal-close" aria-label="Close Modal">
+          <img src="/images/exit.svg" alt="" />
+        </button>
+        <h2>Booking Received!</h2>
+        <p>A confirmation email will arrive in your inbox shortly. We look forward to hosting you at Scenic Forests.</p>
+      </div>
+    </div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
