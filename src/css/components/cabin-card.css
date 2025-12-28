@@ -1,0 +1,26 @@
+/* Cabin Card Component */
+
+.cabin-card {
+  margin: var(--space-lg);
+}
+
+.cabin-card-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cabin-card-body {
+  padding-top: var(--space-md);
+}
+
+.cabin-card-title {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-md);
+}
+
+.cabin-card-desc {
+  font-size: var(--fs-base);
+  margin-bottom: var(--space-md);
+}

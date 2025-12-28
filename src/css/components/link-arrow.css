@@ -16,11 +16,18 @@
 .link-arrow img {
   width: 10px;
   height: auto;
+  filter: brightness(0) saturate(100%); /* Converts image to black */
+  opacity: 1;
+}
+
+/* When parent context is light text (like in hero), invert the arrow */
+.hero .link-arrow img {
+  filter: brightness(0) saturate(100%) invert(1); /* Converts to white */
 }
 
 /* Underline Effect */
 .link-arrow::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;

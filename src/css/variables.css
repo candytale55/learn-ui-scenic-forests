@@ -4,6 +4,17 @@
   --font-main: "Montserrat", sans-serif;
   --font-accent: "Playfair Display", serif;
 
+  /* Font Sizes */
+  --fs-sm: 0.85rem;
+  --fs-base: 1rem;
+  --fs-md: 1.25rem;
+  --fs-lg: 2rem;
+
+  /* Font Weights */
+  --fw-reg: 400;
+  --fw-med: 600;
+  --fw-bold: 700;
+
   --color-primary:      #72A84A;
   --color-bg-light:     #D8EACB;
   --color-bg-dark:      #1A1A1A;

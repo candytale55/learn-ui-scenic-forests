@@ -7,6 +7,7 @@
 @import "./components/navigation.css";
 @import "./components/link-arrow.css";
 @import "./components/avatar.css";
+@import "./components/cabin-card.css";
 @import "./pages/home.css";
 
 /* ============================================
@@ -23,6 +24,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-main);
+  font-weight: var(--fw-reg);
+  line-height: 1.7;
+  text-align: center;
   background-color: var(--color-bg-light);
   color: var(--color-black);
 }
@@ -44,6 +48,21 @@ h4,
 h5,
 h6 {
   margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-weight: var(--fw-med); /* Elegant, not bold */
+}
+
+h2,
+h3,
+h4 {
+  font-weight: var(--fw-bold);
+}
+
+p {
+  font-size: var(--fs-base);
   margin-bottom: var(--space-md);
 }
 
@@ -88,7 +107,10 @@ ol {
    ============================================ */
 
 .container {
-  width: min(92%, var(--container-max-width)); /* Fluid width with max constraint */
+  width: min(
+    92%,
+    var(--container-max-width)
+  ); /* Fluid width with max constraint */
   margin-inline: auto;
 }
 
@@ -103,4 +125,3 @@ ol {
 .padded {
   padding: var(--space-lg); /* Internal cushioning for cards/boxes */
 }
-
