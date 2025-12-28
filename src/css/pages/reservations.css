@@ -37,16 +37,19 @@
 
 .map-container {
   width: 100%;
-  min-height: 400px; /* Minimum height for map visibility */
-  border-radius: var(--border-radius-lg);
-  overflow: hidden; /* Keeps iframe corners rounded */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle elevation */
+  height: 400px; /* Fixed height for proper iframe display */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%; /* Fills container completely */
+  display: block; /* Removes extra spacing */
 }
 
 @media (min-width: 800px) {
   .map-container {
-    min-height: 600px; /* Taller on desktop to match form height */
-    position: sticky; /* Optional: keeps map visible while scrolling form */
+    height: 500px; /* Reasonable height on desktop */
+    position: sticky; /* Keeps map visible while scrolling form */
     top: var(--space-xl);
   }
 }
