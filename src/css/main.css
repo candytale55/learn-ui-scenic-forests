@@ -116,6 +116,13 @@ ol {
 
 .section {
   padding-block: var(--section-padding); /* Vertical section spacing */
+  padding-inline: var(--space-md); /* Horizontal breathing room on mobile */
+}
+
+@media (min-width: 700px) {
+  .section {
+    padding-inline: 0; /* Remove on desktop, let container handle width */
+  }
 }
 
 .stack > * + * {
