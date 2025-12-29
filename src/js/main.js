@@ -1,4 +1,5 @@
 // Main JavaScript
+import { gsap } from 'gsap';
 
 // ============================================
 // Footer Year Auto-Update
@@ -134,4 +135,41 @@ if (modalClose && successModal && bookingForm) {
       bookingForm.reset();
     }
   });
+}
+
+
+// ============================================
+// GSAP Entrance Animations
+// ============================================
+
+const initAnimations = () => {
+  const tl = gsap.timeline({
+    defaults: { duration: 1.2, ease: "power4.out" }
+  });
+
+  // 1. Fade in the text block (Subtitle and CTA)
+  tl.from(".hero-copy", {
+    y: 40,
+    opacity: 0,
+  })
+  
+  // 2. The "Blind Reveal" for H1 Spans 
+  // We move the clip-path from the bottom strip to a full rectangle
+  .to(".hero h1 span, .sub-hero h1 span", {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    stagger: 0.2,
+    duration: 1.8,
+  }, "-=1.0") // Starts 1 second before previous ends
+
+  // 3. Staggered Cabin Cards
+  .from(".cabin-card", {
+    y: 60,
+    opacity: 0,
+    stagger: 0.2,
+  }, "-=0.8");
+};
+
+// Only run animations if we are on a page with a hero
+if (document.querySelector('.hero') || document.querySelector('.sub-hero')) {
+  initAnimations();
 }
