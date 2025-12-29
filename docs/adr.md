@@ -126,3 +126,20 @@ We will use a central JavaScript utility in `main.js` to inject the current year
 - **Cons:** 
     - **JS Dependency:** If JS fails to load, the year will be blank. (Mitigation: We could hardcode 2025 in the HTML as a fallback).
 
+---
+
+---
+
+## ADR 008: Motion Design with GSAP
+**Date:** 2025-12-29  
+**Status:** Accepted
+
+### Context
+To elevate the UI from a basic tutorial to a professional portfolio piece, we need high-fidelity entrance animations that reflect the "scenic" and "premium" nature of the brand.
+
+### Decision
+We will use **GSAP (GreenSock Animation Platform)** for all UI motion. We will move animation logic into a dedicated module or a specific section of `main.js`.
+
+### Consequences
+- **Pros:** Precise control over timing, superior performance across browsers, and easy implementation of "staggered" card entrances.
+- **Cons:** Adds a small external dependency (~25kb). (Accepted for the visual value provided).
